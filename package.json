@@ -1,7 +1,7 @@
 {
 	"name": "enhanced_promise",
 	"description": "Enhanced promise. Features: Turning async functions into sync; Querying status, result, reason in the script; Providing sleep(seconds), msleep(milliseconds) functions.",
-	"version": "2020.01.08",
+	"version": "2020.01.09",
 	"author": "Sam0230",
 	"license": "BSD-3-Clause",
 	"gypfile": true,

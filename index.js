@@ -63,6 +63,8 @@ module.exports.Promise = global.Promise = class Promise extends originalPromise 
 					if (+(pending.toString())) {
 						for (let i = 0; i < Detacher.length; i++) {
 							Detacher[i]();
+							Detacher.splice(i, 1);
+							i--;
 						}
 					}
 				});
@@ -93,7 +95,8 @@ module.exports.Promise = global.Promise = class Promise extends originalPromise 
 			requireDetach.remove = function () {
 				for (let i = 0; i < Detacher.length; i++) {
 					if (Detacher[i] == requireDetach) {
-						Detacher.splice(i, 0);
+						Detacher.splice(i, 1);
+						break;
 					}
 				}
 			}
@@ -107,7 +110,6 @@ module.exports.Promise = global.Promise = class Promise extends originalPromise 
 				clearTimeout(timeoutID);
 			}
 			if (Boolean(+detachRequired.toString())) {
-				requireDetach.remove();
 				return -4;
 			}
 			requireDetach.remove();
