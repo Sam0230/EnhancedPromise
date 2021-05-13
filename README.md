@@ -1,9 +1,9 @@
 # EnhancedPromise
 Enhanced Promise for Node.js.
 ### Features
-* Turning async functions into sync
-* Querying status, result, reason in the script
-* Providing sleep(seconds), msleep(milliseconds) functions
+* Convert async functions into sync
+* Query status, result, reason in the script
+* Provide sleep(seconds), msleep(milliseconds) functions
 ### Usage
 ``` JavaScript
 require("enhanced_promise");
